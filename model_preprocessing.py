@@ -1,11 +1,16 @@
 import pandas as pd
 import numpy as np
-from scipy.stats import norm, skew
 from sklearn.preprocessing import LabelEncoder
-
+from pathlib import Path
+from typing import Any
+import pickle
 import consts
-from utils import save_data
 
+
+def save_data(data: Any, path: str, full_path: str) -> None:
+   Path(path).mkdir(parents=True, exist_ok=True)
+   with open(full_path, 'wb') as f:
+      pickle.dump(data, f)
 
 df = pd.read_csv("/kaggle/input/data-science-salaries-2023/ds_salaries.csv")
 x_train = pd.read_pickle(consts.X_TRAIN_FULL)
