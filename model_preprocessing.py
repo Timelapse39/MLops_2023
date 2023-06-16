@@ -12,7 +12,7 @@ def save_data(data: Any, path: str, full_path: str) -> None:
    with open(full_path, 'wb') as f:
       pickle.dump(data, f)
 
-df = pd.read_csv("/kaggle/input/data-science-salaries-2023/ds_salaries.csv")
+df = pd.read_csv(consts.DATA_PATH, delimiter=',')
 x_train = pd.read_pickle(consts.X_TRAIN_FULL)
 y_train = pd.read_pickle(consts.Y_TRAIN_FULL)
 train = pd.merge(x_train, y_train, on=x_train.index)
@@ -46,7 +46,7 @@ save_data(x_train, consts.X_TRAIN, consts.X_TRAIN_FULL)
 save_data(y_train, consts.Y_TRAIN, consts.Y_TRAIN_FULL)
 
 x_test = test
-y_test = np.array(y_test['salary_range'])
+y_test = np.array(y_test['salary'])
 
 save_data(x_test, consts.X_TEST, consts.X_TEST_FULL)
 save_data(y_test, consts.Y_TEST, consts.Y_TEST_FULL)
