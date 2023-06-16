@@ -21,8 +21,8 @@ def time_now():
 
 print(f'{time_now()} Загрузка данных')
 data = pd.read_csv(consts.DATA_PATH, delimiter=',')
-x = data.drop(columns=["salary_range"])
-y = data["salary_range"]
+x = data.drop(columns=["salary"])
+y = data["salary"]
 X_train, X_test, y_train, y_test = train_test_split(x, y, test_size=consts.DATA_TEST_SIZE, random_state=consts.RANDOM_STATE)
 print(f'{time_now()} Сохранение данных')
 save_data(X_train, consts.X_TRAIN, consts.X_TRAIN_FULL)
