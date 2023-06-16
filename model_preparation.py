@@ -31,7 +31,8 @@ x_train, x_test, y_train, y_test = train_test_split(X, Y, test_size=consts.DATA_
                                                     random_state=consts.RANDOM_STATE)
 
 model=RandomForestRegressor(max_depth=7 , max_features=3,n_estimators= 100)
-
+print_log(X.head())
+print_log(Y.head())
 print_log('Fit model')
 model.fit(X, Y)
 
