@@ -1,3 +1,5 @@
+from typing import Any
+
 from sklearn.metrics import r2_score
 import pickle
 import consts
