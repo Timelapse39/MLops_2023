@@ -31,7 +31,7 @@ all_data['experience_level'] = all_data['experience_level'].replace({'SE':'Senio
 all_data['employment_type'] = all_data['employment_type'].replace({'FT':'Full-time', 'CT':'Contractual','PT':'Part-time', 'FL':'Freelancer'})
 all_data['remote_ratio'] = all_data['remote_ratio'].replace({100: 'On-site', 0:'Remote', 50:'Hybrid'})
 all_data['company_size'].replace(['M','L','S'],["medium","Large","Small"],inplace=True)
-all_data = all_data.drop(['salary'], axis=1)
+all_data = all_data.drop(columns=['salary'])
 le=LabelEncoder()
 cols = ['experience_level', 'employment_type', 'job_title','salary_currency','employee_residence','company_location','company_size']
 all_data[cols]=all_data[cols].apply(LabelEncoder().fit_transform)
