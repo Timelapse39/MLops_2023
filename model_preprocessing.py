@@ -18,6 +18,9 @@ y_train = pd.read_pickle(consts.Y_TRAIN_FULL)
 train = pd.merge(x_train, y_train, on=x_train.index)
 x_test = pd.read_pickle(consts.X_TEST_FULL)
 y_test = pd.read_pickle(consts.Y_TEST_FULL)
+
+y_train = pd.DataFrame({'salary': y_train}, index=x_train.index))
+y_test = pd.DataFrame({'salary': y_test}, index=x_test.index)
 test = pd.merge(x_test, y_test, on=x_test.index)
 ntrain = train.shape[0]
 ntest = test.shape[0]
