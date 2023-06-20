@@ -1,0 +1,3 @@
+[submodule "mlops-lab4"]
+	path = mlops-lab4
+	url = https://github.com/Timelapse39/mlops-lab4-2023.git
