@@ -3,7 +3,7 @@ $ErrorActionPreference = "Stop" # Exit after first error code
 $USERNAME = Read-Host 'What is your Docker Hub account username?'
 $PASSWORD = Read-Host 'What is your Docker Hub account password?' -AsSecureString
 $PASSWORD = [Runtime.InteropServices.Marshal]::PtrToStringAuto([Runtime.InteropServices.Marshal]::SecureStringToBSTR($PASSWORD))
-$APP_NAME = "Gen_Story_By_Picture"
+$APP_NAME = "gen_story_by_picture"
 
 #$USERNAME="username"
 #$PASSWORD="password"
