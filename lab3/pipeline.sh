@@ -10,7 +10,7 @@ stty echo
 
 #USERNAME="username"
 #PASSWORD="password"
-APP_NAME="Gen_Story_By_Picture"
+APP_NAME="gen_story_by_picture"
 SCRIPT_DIR=$(cd "$(dirname "${BASH_SOURCE[0]}")" &>/dev/null && pwd -P)
 APP_PATH="$SCRIPT_DIR/app/"
 
