@@ -1,7 +1,7 @@
 version: "3.9"
 services:
   app:
-    image: Gen_Story_By_Picture
+    image: gen_story_by_picture
     build: ./app
     ports:
       - "8501:8501"
